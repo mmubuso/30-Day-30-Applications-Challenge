@@ -2,21 +2,20 @@ import React, { Component } from 'react';
 import './Pomodoro.css';
 import Button from '../../component/Button/Button';
 import CountdownDisplay from '../../component/CountdownDisplay/CountdownDisplay';
+import TimeTracker from '../../component/TimeTracker/TimeTracker';
 import RefreshButton from '../../lib/images/refresh-button-black.svg';
-import PlayButton from '../../lib/images/play-button.svg';
-import PauseButton from '../../lib/images/pause-bars.svg';
+
 
 export default class Pomodoro extends Component {
 
     state = {
         isDisplayingBreak: false,
-        breakTime:25,
+        breakTime: 22,
         breakTotalSeconds: 0,
-        sessionTime : 25,
-        sessionTotalSeconds: 500,
-        timeDisplayed :[0,0,0,0],
-        timeBelowMinute :false,
-        showPauseButton :false,
+        sessionTime: 23,
+        sessionTotalSeconds: 0,
+        timeBelowMinute: false,
+        showPauseButton: false,
     }
 
     //handle time increase or decrese
@@ -29,6 +28,15 @@ export default class Pomodoro extends Component {
     //Reset time value for break, and session
     resetTimeValue = () => {
 
+    }
+
+    componentDidMount(){
+        let breakTotalSeconds = this.state.breakTime * 60
+        let sessionTotalSeconds = this.state.sessionTime * 60
+        this.setState({
+            breakTotalSeconds,
+            sessionTotalSeconds
+        })
     }
 
     //Start/resume timer countdown 
@@ -52,16 +60,32 @@ export default class Pomodoro extends Component {
         return (
             <div className='pomodoro'>
                 <div className='refresh-button'>
-                    <Button 
+                    <Button
                         callFunction={this.resetTimeValue}
                         button={RefreshButton}
                         altText='refresh arrow'
                     />
                 </div>
-                <CountdownDisplay 
+                <CountdownDisplay
                     seconds={this.state.sessionTotalSeconds}
                     activeTimer='Session'
                 />
+                <div className='time-tracker-container'>
+                    <TimeTracker
+                        title='break'
+                        number={this.state.breakTime}
+                        name='breakTime'
+                        increase={console.log}
+                        decrease={console.log}
+                    />
+                    <TimeTracker
+                        title='session'
+                        number={this.state.sessionTime}
+                        name='sessionTime'
+                        increase={console.log} 
+                        decrease={console.log}
+                        />
+                </div>
             </div>
         )
     }

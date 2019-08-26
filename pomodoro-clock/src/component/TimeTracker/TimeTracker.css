@@ -1,0 +1,18 @@
+.time-tracker{
+    display: inline-block;
+    font-size: 105px;
+    color: white;
+}
+.time-tracker h3{
+    font-size: 25px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.increment{
+    display: inline-block;
+    font-size: 80px;
+    padding-bottom: 10px;
+    color: black;
+    font-weight: 900;
+}

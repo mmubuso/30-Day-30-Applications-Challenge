@@ -13,3 +13,12 @@
     margin-top: 10px;
     margin: auto 15px;
 }
+
+.time-tracker-container{
+    font-family: 'Darker Grotesque', sans-serif;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
