@@ -6,6 +6,7 @@
 
 .countdown-display h2{
     margin-bottom: 0px;
+    text-transform: uppercase;
 }
 
 .time-display{
@@ -23,4 +24,8 @@
 
 .time-number:hover {
     font-size: 160px;
+}
+
+.red-font{
+    color: red !important;
 }

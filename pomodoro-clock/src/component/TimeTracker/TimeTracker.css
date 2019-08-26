@@ -15,4 +15,9 @@
     padding-bottom: 10px;
     color: black;
     font-weight: 900;
+    transition: font-size 0.5s;
+}
+
+.increment:hover{
+    font-size: 110px;
 }

@@ -5,10 +5,10 @@ export default function TimeTracker(props) {
     return (
         <div className='time-tracker'>
             <h3>{props.title}</h3>
-            <span className='increment' onClick={() => props.increase(props.name)}> +
+            <span className='increment' onClick={() => props.increase(props.name,1)}> +
                 </span>
-            {props.number}
-            <span className='increment' onClick={() => props.decrease(props.name)}> -
+            {(props.number + '').padStart(2,'0')}
+            <span className='increment' onClick={() => props.decrease(props.name,-1)}> -
                 </span>
         </div>
     )
