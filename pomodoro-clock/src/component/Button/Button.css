@@ -1,3 +1,9 @@
 .button {
-    height: 25px;
+    height: 35px;
+    transition: height 0.5s;
 }
+
+.button:hover{
+    height: 50px;
+}
+

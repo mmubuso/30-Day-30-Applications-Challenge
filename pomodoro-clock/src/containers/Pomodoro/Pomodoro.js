@@ -1,5 +1,9 @@
-import React, { Component } from 'react'
-import './Pomodoro.css'
+import React, { Component } from 'react';
+import './Pomodoro.css';
+import Button from '../../component/Button/Button';
+import RefreshButton from '../../lib/images/refresh-button-black.svg';
+import PlayButton from '../../lib/images/play-button.svg';
+import PauseButton from '../../lib/images/pause-bars.svg';
 
 export default class Pomodoro extends Component {
 
@@ -44,7 +48,13 @@ export default class Pomodoro extends Component {
     render() {
         return (
             <div className='pomodoro'>
-                
+                <div className='refresh-button'>
+                    <Button 
+                        callFunction={this.resetTimeValue}
+                        button={RefreshButton}
+                        altText='refresh arrow'
+                    />
+                </div>
             </div>
         )
     }
