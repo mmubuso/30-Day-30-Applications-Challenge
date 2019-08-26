@@ -1,0 +1,54 @@
+/* Style to do items */
+.toDoItem{
+    background-color: #ffffff;
+    border-radius: 1.9em;
+    border: 1px solid whitesmoke;
+    margin: 10.5px 10px;
+    box-shadow: 5px 5px 9px -1px #ccc;
+}
+
+.toDoItem p{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 1em;
+    padding: 20px 30px;
+    margin: auto 0 !important;
+}
+ 
+/* Run line through P tag */
+.checkedP{
+    color: grey;
+    text-decoration-line: line-through;
+}
+
+
+.uncheckedMark {
+    display: inline-block;
+    border: 1.5px solid whitesmoke;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 1em;
+    box-shadow: 5px 5px 9px -1px #ccc
+}
+
+.checkedMark {
+    display: inline-block;
+    border: 1.5px solid whitesmoke;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 1em;
+    background-image: url('../lib/images/check.svg');
+    background-size: cover;
+}
+
+
+.delete{
+    display: inline-block;
+    border: 1.5px solid whitesmoke;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 1em;
+    background-image: url('../lib/images/remove.svg');
+    background-size: cover;
+}

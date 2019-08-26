@@ -1,0 +1,64 @@
+/* To do list style sheet */
+.ToDoList {
+    max-width: 480px;
+    background-color: #FDFDFD;
+    margin: 0 auto;
+    margin-top: -16px;
+    height: 800px;
+    border-radius: 10px;
+    position: relative;
+}
+.deleteItems{
+    text-align: left;
+    text-transform: uppercase;
+    display: inline-block;
+    position: absolute;
+    left: 35px;
+    top: 25px;
+    border: 1px solid grey;
+    padding: 2px;
+    box-shadow: 5px 5px 9px -1px #ccc;
+}
+
+/*  */
+.listContainer {
+    height: 700px;
+    overflow-y: auto;
+}
+
+.ToDoList form{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.inputField{
+    display: inline-block;
+    font-size: 20px;
+    width: 80%;
+}
+
+input[type=text] {
+    height: 100%;
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 0px solid #8842d5;
+    outline: none;  
+    text-align: center;
+}
+
+input[type=text]:focus{
+    font-size: 30px;
+}
+.addTask{
+    display: inline-block;
+    margin: auto auto;
+    height: 2.8em;
+    width: 2.8em;
+    background-image: url('../lib/images/plus.svg');
+    background-size: cover;
+}
