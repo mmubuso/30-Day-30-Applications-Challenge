@@ -4,8 +4,23 @@
     color: white;
 }
 
+.countdown-display h2{
+    margin-bottom: 0px;
+}
+
 .time-display{
-    font-family: 'Orbitron', sans-serif;
-    font-size: 90px;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 150px;
     margin: 0 auto; 
+    height: fit-content;
+    margin-top: -33px;
+}
+
+.time-number{
+    display: inline-block;
+    transition: font-size 1s;
+}
+
+.time-number:hover {
+    font-size: 160px;
 }
