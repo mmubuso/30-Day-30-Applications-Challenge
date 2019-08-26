@@ -1,0 +1,11 @@
+.countdown-display{
+    height: 200px;
+    margin-top: 200px;
+    color: white;
+}
+
+.time-display{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 90px;
+    margin: 0 auto; 
+}

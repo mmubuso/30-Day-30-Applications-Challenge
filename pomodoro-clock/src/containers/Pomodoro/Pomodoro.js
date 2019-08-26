@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Pomodoro.css';
 import Button from '../../component/Button/Button';
+import CountdownDisplay from '../../component/CountdownDisplay/CountdownDisplay';
 import RefreshButton from '../../lib/images/refresh-button-black.svg';
 import PlayButton from '../../lib/images/play-button.svg';
 import PauseButton from '../../lib/images/pause-bars.svg';
@@ -10,7 +11,9 @@ export default class Pomodoro extends Component {
     state = {
         isDisplayingBreak: false,
         breakTime:25,
+        breakTotalSeconds: 0,
         sessionTime : 25,
+        sessionTotalSeconds: 500,
         timeDisplayed :[0,0,0,0],
         timeBelowMinute :false,
         showPauseButton :false,
@@ -55,6 +58,10 @@ export default class Pomodoro extends Component {
                         altText='refresh arrow'
                     />
                 </div>
+                <CountdownDisplay 
+                    seconds={this.state.sessionTotalSeconds}
+                    activeTimer='Session'
+                />
             </div>
         )
     }
