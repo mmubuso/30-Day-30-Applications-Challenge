@@ -1,0 +1,12 @@
+/* Calculator style */
+.calculator{
+    max-height: 950px;
+    height: 100vh;
+    background: green;
+    max-width: 500px;
+    width: 100vw;
+    margin: auto;
+}
+
+
+
