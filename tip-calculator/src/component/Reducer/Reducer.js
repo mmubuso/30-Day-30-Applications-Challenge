@@ -5,16 +5,16 @@ export default function Reducer(props) {
 
     return (
         <div className='reducer'>
-            <p className='title'>{props.title}</p>
+            <p className='reducer-title'>{props.title}</p>
             <div className='container-reducer'>
                 <div className='area1'>
-                    <span onClick={props.handleValueChange(-1)}>-</span>
+                    <span className='incrementors' onClick={() => props.handleValueChange(props.title === 'tip' ? -5 : -1 )}>-</span>
                 </div>
                 <div className='area1'>
-                    <p>{props.value}</p>
+                    <p className='reducer-value'>{props.value}</p>
                 </div>
                 <div className='area1'>
-                    <span onClick={props.handleValueChange(1)}>+</span>
+                    <span className='incrementors' onClick={() => props.handleValueChange(props.title === 'tip' ? 5 : 1)}>+</span>
                 </div>
             </div>
         </div>

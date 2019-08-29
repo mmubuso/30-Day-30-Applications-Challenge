@@ -8,5 +8,9 @@
     margin: auto;
 }
 
+.cost-container {
+    display: flex;
+    justify-content: space-around;
+}
 
 

@@ -1,15 +1,21 @@
-.Total{
+.total{
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
     font-size: 1.5em;
+    margin: auto 20px;
+}
+
+.total-title {
+    text-transform: uppercase;
 }
 
 .total-input{
     background: transparent;
     outline: none;
     border-style: none;
-    width: fit-content;
+    max-width: 170px;
     text-align: right;
     font-size: 1em;
+    color: whitesmoke;
 }

@@ -6,13 +6,13 @@ export default function Total(props) {
 
 
     return (
-        <div className='Total'>
-            <p>{props.billType} Total </p>
+        <div className='total'>
+            <p className='total-title'>{props.billType} Total </p>
             <input
                 className='total-input'
                 type='text'
                 value={props.total} 
-                onChange={() => console.log('i')}/>
+                onChange={props.updateValue}/>
         </div>
     )
 }
