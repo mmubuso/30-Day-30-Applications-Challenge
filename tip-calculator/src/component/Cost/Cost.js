@@ -1,10 +1,7 @@
 import React from 'react'
+import './Cost.css'
 
-export default function Cost(props) {
-    
-    console.log(props.total)
-   
-    
+export default function Cost(props) {   
 
     return (
         <div className='cost'>

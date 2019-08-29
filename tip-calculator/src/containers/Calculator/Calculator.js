@@ -90,6 +90,7 @@ export default function Calculator() {
             <Total
                 billType={'Each'}
                 total={individualBill + tip}
+                updateValue={console.log}
             />
         </div>
     )
