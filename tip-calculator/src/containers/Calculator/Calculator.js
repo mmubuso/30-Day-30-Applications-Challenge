@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Calculator.css'
 import Total from '../../component/Total/Total';
+import Reducer from '../../component/Reducer/Reducer';
 
 export default function Calculator() {
 
@@ -21,6 +22,16 @@ export default function Calculator() {
             <Total 
             billType={'Bill'}
             total={billTotal}/>
+            <Reducer 
+                title={'tip'}
+                handleValueChange={updateTipPercent}
+                value={tipPercent + '%'}
+            />
+             <Reducer 
+                title={'split'}
+                handleValueChange={updateSplitAmount}
+                value={splitAmount}
+            />
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Total.css';
 
 
@@ -10,8 +10,9 @@ export default function Total(props) {
             <p>{props.billType} Total </p>
             <input
                 className='total-input'
-                ype='text'
-                value={props.total} />
+                type='text'
+                value={props.total} 
+                onChange={() => console.log('i')}/>
         </div>
     )
 }

@@ -1,0 +1,9 @@
+.container-reducer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    text-transform: uppercase;
+    text-align: left;
+}
