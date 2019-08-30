@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+  background: #ffc600;
+}
+
+.photobooth {
+  background: white;
+  max-width: 150rem;
+  margin: 2rem auto;
+  border-radius: 2px;
+}
+
+/*clearfix*/
+.photobooth:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.photo {
+  width: 100%;
+  float: left;
+}
+
+.player {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width:200px;
+}
+
+/*
+  Strip!
+*/
+
+.strip {
+  padding: 2rem;
+}
+
+.strip img {
+  width: 100px;
+  overflow-x: scroll;
+  padding: 0.8rem 0.8rem 2.5rem 0.8rem;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  background: white;
+
+}
+
+img{
+  height: 18em;
+  transition: height 1s;
+  border: 5px solid white;
+  border-bottom-width: 30px;
+}
+
+img:hover{
+  height: 20.5em;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(60px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+a:nth-child(5n+1) img { border-color: wheat; }
+a:nth-child(5n+2) img { border-color: greenyellow; }
+a:nth-child(5n+3) img { border-color: snow; }
+a:nth-child(5n+4) img { border-color: salmon; }
+a:nth-child(5n+5) img { border-color: sienna; }
+
+.strip a:nth-child(5n+1) img { transform: rotate(10deg); }
+.strip a:nth-child(5n+2) img { transform: rotate(-2deg); }
+.strip a:nth-child(5n+3) img { transform: rotate(8deg); }
+.strip a:nth-child(5n+4) img { transform: rotate(-11deg); }
+.strip a:nth-child(5n+5) img { transform: rotate(12deg); }
