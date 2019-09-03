@@ -5,11 +5,9 @@ import {
   View,
   Text,
 } from 'react-native';
-import axios from 'axios';
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { NativeRouter, Route, Link } from "react-router-native";
 import Search from './containers/Search/Search';
-
 
 const Topic = ({ match }) => (
   <Text style={styles.topic}>{match.params.topicId}</Text>
@@ -54,18 +52,6 @@ const Topics = ({ match }) => (
 
 const App = () => {
 
-  const [movies, updateMovies] = useState()
-
-  let loadMovieDataBase = (searchQuery) => {
-    let url = `http://www.omdbapi.com/?s=${searchQuery}&apikey=`
-    axios.get(url)
-      .then(results => updateMovies(results.data.Search))
-      .catch(err => alert('err'))
-  }
-
-  //configure search component to pass loadmovies function
-  let SearchComponent = () => <Search loadmovies={loadMovieDataBase}/>
-
   return (
     <NativeRouter>
       <View style={styles.container}>
@@ -78,8 +64,7 @@ const App = () => {
           </Link>
         </View>
 
-        <Route exact path="/" component={SearchComponent} />
-
+        <Route exact path="/" component={Search} />
         <Route path="/topics" component={Topics} />
       </View>
     </NativeRouter>
