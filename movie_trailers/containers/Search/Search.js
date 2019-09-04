@@ -5,6 +5,7 @@ import Movies from '../../components/Movies/Movies';
 
 
 
+
 const Search = () => {
 
 
@@ -19,8 +20,9 @@ const Search = () => {
                     updateMovies(results.data.Search)
                     :
                     alert('No shows found for current Search')
-            })
-            .catch(err => alert('err'))
+            }, updateUserInput(''))
+            .catch(err => console.log('err'))
+
     }
 
     let launchMovieRequest = () => {
@@ -32,6 +34,7 @@ const Search = () => {
         return (
             <Movies
                 key={movie.imdbID}
+                showId={movie.imdbID}
                 image={movie.Poster ? movie.Poster : null}
                 title={movie.Title}
                 type={movie.Type}
@@ -40,26 +43,32 @@ const Search = () => {
     })
 
     let moviesList = showsList(movies.filter(movie => movie.Type === 'movie'))
-    
-    
+
+
 
     let seriesList = showsList(movies.filter(movie => movie.Type !== 'movie'))
 
 
     return (
-        <View>
+        <View style={Styles.Search}>
+
             <TextInput
-                style={{ backgroundColor: 'whitesmoke' }}
+                placeholder='Search for a show'
+                style={Styles.Input}
                 value={userInput}
                 onSubmitEditing={launchMovieRequest}
                 onChangeText={(text) => updateUserInput(text)}>
             </TextInput>
-            <Text>Series</Text>
-            <ScrollView horizontal>
+            <Text
+                style={Styles.title}>{moviesList.length > 0 ? "MOVIES" : null}</Text>
+            <ScrollView horizontal
+                style={Styles.shows}>
                 {moviesList}
             </ScrollView>
-            <Text>Movies</Text>
-            <ScrollView horizontal>
+            <Text
+                style={Styles.title}>{seriesList.length > 0 ? "SERIES" : null}</Text>
+            <ScrollView horizontal
+                style={Styles.shows}>
                 {seriesList}
             </ScrollView>
         </View>
@@ -67,4 +76,23 @@ const Search = () => {
 
 }
 
+const Styles = StyleSheet.create({
+    Search: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+    },
+    Input: {
+        fontSize: 40,
+        flex: 0.2
+    },
+    title: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        flex: 0.2
+    },
+    shows: {
+        flex: 2
+    }
+});
 export default Search;
