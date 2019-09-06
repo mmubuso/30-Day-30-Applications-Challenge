@@ -1,0 +1,10 @@
+.emoji {
+    font-size: 15em;
+    display: inline-block;
+}
+
+.MainBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
