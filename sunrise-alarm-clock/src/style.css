@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.sunrise{
+    background-color: yellow;
+    opacity: 0;
+    height: 200px;
+    /* width: 100%; */
+
+    width: 200px; 
+    border-radius: 100px;
+    /* transform: translate(-100px); */
+    /* align-self: flex-start; */
+}
+
+.current-time{
+    font-size: 10em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.user-time{
+    outline: none;
+    border-style: none;
+    font-size: 5em;
+    width: fit-content;
+}
