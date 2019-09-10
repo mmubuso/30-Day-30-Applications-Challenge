@@ -8,42 +8,48 @@ import {
     Button,
     Image
 } from 'react-native';
+import { Link } from 'react-router-native'
+// City Object For Testing
+
+const auburn = {
+    name: 'auburn',
+    main: {
+        temp: 280.32,
+        pressure: 1012,
+        humidity: 81,
+        temp_min: 279.15,
+        temp_max: 281.15
+    },
+    weather: [
+        {
+            id: 200,
+            main: "Drizzle",
+            description: "light intensity drizzle",
+            icon: "09d"
+        }
+    ],
+    id: 4956976
+}
 
 
 const Search = () => {
 
     // Track user input
     const [userInput, updateUserInput] = useState('');
-    const [showCity, toggleShowCity] = useState(true);
-    const [city, changeCurrentCity] = useState({
-        name: 'auburn', main: {
-            temp: 280.32,
-            pressure: 1012,
-            humidity: 81,
-            temp_min: 279.15,
-            temp_max: 281.15
-        },
-        weather: [
-            {
-                id: 300,
-                main: "Drizzle",
-                description: "light intensity drizzle",
-                icon: "09d"
-            }
-        ],
-    })
+    const [showCity, toggleShowCity] = useState(false);
+    const [city, changeCurrentCity] = useState(auburn)
 
     const getCityId = () => {
         let query = userInput.replace(/[ ]/g, '%20');
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=68d335c63a691a0a4810c97462339b11`)
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=imperial&appid=2754590248e99a371c9a0f245a6d9d50`)
             .then(res => {
+                console.log(res.data)
                 changeCurrentCity(res.data)
                 updateUserInput('')
                 toggleShowCity(true)
             })
             .catch(err => console.log(err))
     }
-
     return (
         <View style={Styles.Search}>
             <TextInput
@@ -63,12 +69,19 @@ const Search = () => {
                                 <Text style={Styles.cityMain}>Temp: {city.main.temp}</Text>
                                 <Text style={Styles.cityMain}>Humidity: {city.main.humidity}</Text>
                                 <Text style={Styles.cityMain}>Pressure: {city.main.pressure}</Text>
+                                <Text></Text>
+                                <Text style={Styles.cityMain}>{city.weather[0].description}</Text>
                             </View>
                             <View style={Styles.icon}>
                                 <Image style={{ height: 150, width: 150 }} source={{ uri: `http://openweathermap.org/img/wn/${city.weather[0].icon}@2x.png` }} />
                             </View>
                         </View>
-                        <Button color='whitesmoke' title="View Weather Info"></Button>
+                        {/* <Button color='whitesmoke' title="View Weather Info"></Button> */}
+                        <Link to={`/weather/${city.id}/${city.name}`}>
+                            <Text style={Styles.link}>
+                                View Weather Info
+                            </Text>
+                        </Link>
                     </View>
                     :
                     null
@@ -83,6 +96,9 @@ const Styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'flex-start',
+        marginTop: 50,
+        marginLeft: 10,
+        marginRight: 10,
     },
     Input: {
         fontSize: 40,
@@ -115,6 +131,10 @@ const Styles = StyleSheet.create({
     },
     icon: {
         flex: 1
+    },
+    link: {
+        textAlign: 'center',
+        color: 'whitesmoke'
     }
 });
 
