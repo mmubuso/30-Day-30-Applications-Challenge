@@ -1,0 +1,33 @@
+body {
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+.containers {
+    margin: 0 auto;
+    width: 1000px;
+    padding: 0 20px;
+    height: 100vh;
+    background-color: white
+}
+
+#chartContainer{
+    width: 50%;
+}
+
+#graphContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    min-height: 550px;
+    justify-content: space-between;
+}
+
+#listOfItems {
+    max-height:  500px;
+    overflow-y: auto;
+}
+
+
