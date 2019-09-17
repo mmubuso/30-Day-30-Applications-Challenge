@@ -43,6 +43,7 @@ export default class MainBody extends Component {
                 const detections = await faceapi.detectAllFaces(this.video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()
                 // We access the first item and grab the expressions onject
                 const expressions = detections[0].expressions
+                
                 // we set our state to hold our expressions
                 await this.setState({ expressions })
 
