@@ -1,0 +1,104 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: 0 auto;
+  height: 700px;
+  background: #8360c3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8360c3, #2ebf91); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8360c3, #2ebf91); 
+  border-radius: 15px;
+}
+
+
+.casual{
+  flex: 1;
+  height: 200px;
+  margin: 1em 1em;
+  
+}
+
+.App-link {
+  color: #61dafb;
+
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.label-item {
+  font-size: 3em;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+.value-item {
+  font-size: 2em;
+  color: whitesmoke;
+}
+
+.bmi-item {
+  font-size: 4em;
+  color: whitesmoke;
+}
+
+/* \\Remove styling on all browers for range */
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+
+/* Style range input */
+input[type="range" i] {
+  width: 85%;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #fff;
+  height: 19px;
+  width: 19px;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1.8px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #e0e0e0;
+  border-radius: 1.3px;
+  border: 0.2px solid #ffffff;
+}

@@ -1,0 +1,8 @@
+input[type="range" i] {
+    -webkit-appearance: slider-horizontal;
+    color: rgb(144, 144, 144);
+    cursor: default;
+    padding: initial;
+    border: initial;
+    margin: 2px;
+}
