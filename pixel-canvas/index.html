@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">MEME Generator</a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <canvas class="col-6" id="meme-canvas"></canvas>
+            <div class="text-container col-6">
+                <label for="topText">Top Text</label>
+                <input type="text" name="topText" class="form-control" id="btmText">
+                <label for="bottomText">Bottom Text</label>
+                <input type="text" name="bottomText" class="form-control" id="topText">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <label class="col-3" for="fileImport">Upload File</label>
+            <input type="file" name="fileImport" class="col-6  form-control ?" id="file">
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
+
 </html>
