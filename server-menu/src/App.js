@@ -20,7 +20,7 @@ function App() {
       return;
     }
     try {
-      let result = await axios.get(`https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_MONTHLY&symbol=${digitalCurrency}&market=${physicalCurrency}&apikey=NBOFOQRZ1CMA8WQ`)
+      let result = await axios.get(`https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_MONTHLY&symbol=${digitalCurrency}&market=${physicalCurrency}&apikey=${apikey}`)
       updateCurrencyInfo(result.data["Meta Data"])
       let newData = formatData(result.data["Time Series (Digital Currency Monthly)"])
       updateMarketData(newData);
