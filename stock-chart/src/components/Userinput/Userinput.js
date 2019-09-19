@@ -3,8 +3,6 @@ import React from 'react'
 export default function Userinput(props) {
 
     
-
-
     return (
         <div className="col-sm-4 col-lg-3">
             <label
