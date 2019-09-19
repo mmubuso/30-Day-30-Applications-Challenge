@@ -1,0 +1,11 @@
+.list-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.typo2{
+    text-align: center;
+    margin-top: 10px;
+}

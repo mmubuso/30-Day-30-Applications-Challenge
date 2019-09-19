@@ -43,7 +43,7 @@ export default class MainBody extends Component {
                 const detections = await faceapi.detectAllFaces(this.video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()
                 // We access the first item and grab the expressions onject
                 const expressions = detections[0].expressions
-                
+
                 // we set our state to hold our expressions
                 await this.setState({ expressions })
 
@@ -82,8 +82,12 @@ export default class MainBody extends Component {
     render() {
         return (
             <div className='MainBody'>
-                <div className='emoji'>{this.state.displayEmoji}</div>
-                <video onPlay={this.recognizeFace} ref={(e) => this.video = e} height='720' width='720' autoPlay muted></video>
+                <h1>Face Recognition Api</h1>
+                <p>It take about 20 seconds for the models to load after enabling the camera, so please be patient</p>
+                <div className="camera">
+                    <div className='emoji'>{this.state.displayEmoji}</div>
+                    <video onPlay={this.recognizeFace} ref={(e) => this.video = e} height='720' width='720' autoPlay muted></video>
+                </div>
             </div>
         )
     }
