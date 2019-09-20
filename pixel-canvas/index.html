@@ -16,19 +16,26 @@
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">MEME Generator</a>
     </nav>
-    <div class="container">
-        <div class="row">
-            <canvas class="col-6" id="meme-canvas"></canvas>
-            <div class="text-container col-6">
+    <div class=" mt-2 container jumbotron style-container">
+        <div class="meme-container row ">
+            <canvas class="col-sm-6 col-md-6" id="meme-canvas"></canvas>
+            <div class="text-container col-sm-6 col-md-6">
                 <label for="topText">Top Text</label>
-                <input type="text" name="topText" class="form-control" id="btmText">
+                <input placeholder="Enter Text" type="text" name="topText" class="form-control" id="topText">
                 <label for="bottomText">Bottom Text</label>
-                <input type="text" name="bottomText" class="form-control" id="topText">
+                <input placeholder="Enter Text" type="text" name="bottomText" class="form-control" id="btmText">
             </div>
         </div>
-        <div class="row justify-content-center">
-            <label class="col-3" for="fileImport">Upload File</label>
-            <input type="file" name="fileImport" class="col-6  form-control ?" id="file">
+        <div class="button-container ">
+            <button class='btn-info' type="submit" id="uploadButton">Upload</button>
+            <button class='btn-success' type="submit" id="generateButton">Generate Meme</button>
+        </div>
+        <div class="file-container row justify-content-center">
+            <input type="file" name="fileImport" class="col-sm-3 col-md-3  form-control" id="userFile">
+        </div>
+        <div class="image-row">
+            <!-- Display meme here -->
+        
         </div>
     </div>
     <script src="main.js"></script>

@@ -1,0 +1,54 @@
+body{
+    background-image: url('https://images.unsplash.com/photo-1568438350562-2cae6d394ad0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.meme-canvas{
+    border: 3px solid black;
+}
+
+.meme-container{
+    flex: 3
+}
+
+.button-container{
+    flex: 1
+}
+
+.file-container{
+    flex: 1
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.image-row {
+    flex: 2;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 200px;
+}
+
+img{
+    height: 120px;
+}
+
+.style-container{
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+.meme-display{
+    height: 150px; 
+    display: flex;
+    flex-direction: column;
+}
+
