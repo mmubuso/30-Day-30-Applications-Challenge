@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import MultiBooks from '../../components/MultiBooks/MultiBooks';
+import { Link } from "react-router-dom";
 
 export default class Library extends Component {
     state = {
@@ -13,20 +14,26 @@ export default class Library extends Component {
 
     //Get books and store it in state data from server
     getBooksFromServer = () => {
-        axios.get('http://localhost:8000/api/v1/books')
+        axios.get('/api/v1/books')
             .then(results => {
                 this.setState({ libraries: results.data })
-                console.log(results)
             })
             .catch(err => console.log(err))
     }
-    
+
+    deleteBook = (bookToBeDeleted) => {
+        let books = this.state.libraries.filter(book => bookToBeDeleted !== book.ID)
+        this.setState({ libraries: books })
+    }
+
 
     render() {
         let books = this.state.libraries.map(book => {
             return (
-                <MultiBooks 
+                <MultiBooks
+                    deleteBook={this.deleteBook}
                     key={book.ID}
+                    description={book.Description}
                     id={book.ID}
                     title={book.Title}
                     author={`${book.Author.FirstName} ${book.Author.LastName}`}
@@ -34,9 +41,9 @@ export default class Library extends Component {
             )
         })
         return (
-            <div className="container">
+            <div className="container mt-4">
                 <div className="jumbotron">
-                    <h1>Musiteli Mubuso</h1>
+                    <button><Link to='/forms/create'>Create Book</Link></button>
                     {books}
                 </div>
             </div>
