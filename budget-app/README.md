@@ -6,10 +6,10 @@
 
 
 ## Overview
-A application to see your monthly budget as a graph.
+A application to see your monthly budget as a graph. Used CanvasJs to create application.
 
 ## Preview
-![Picture of Budget App](https://github.com/mmubuso/30-Day-30-Applications-Challenge/blob/master/book-shelf/public/Book%20Shelf.png)
+![Picture of Budget App](https://github.com/mmubuso/30-Day-30-Applications-Challenge/blob/master/budget-app/BudgetApp.png)
 
 
 ## Technologies Used
