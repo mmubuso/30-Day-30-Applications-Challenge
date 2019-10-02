@@ -13,7 +13,7 @@ A CookBook app built with React that lets users  search recipes using fork2It ap
 
 
 ## Preview
-![Picture of CookBook Website]()
+![Picture of CookBook Website](https://github.com/mmubuso/30-Day-30-Applications-Challenge/blob/master/cookbook-web/public/cookbook.png)
 
 
 ## Technologies Used
