@@ -18,8 +18,5 @@ A Book shelf managing application
 
 
 ## Technologies Used
-- Frootend--> React, React Hooks
-- Backend --> Golang with Mux Router
-
-
-
+- Frontend--> React, React Hooks
+- Backend --> Golang with Mux Route
