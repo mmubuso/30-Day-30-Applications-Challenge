@@ -17,7 +17,7 @@ A Body mass calculator application built with React
 
 
 ## Technologies Used
-- Frootend--> React, React Hooks
+- Frontend--> React, React Hooks
 
 ## Acknowledgements
 -CSS Tricks for the styling of slider
