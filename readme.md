@@ -1,7 +1,7 @@
 # 30 Days 30 Applications Javascript Application
 
 ## Details
-In order to showcase my talent and sharpen my skills in javascript I started a 30 day 30 application challenges (only on monday - friday). The challenge is simple and straight forward. For 30 days create 30 applications. One day at a time. Consistency and time management are extremly important for accomplishing this challenge.
+In order to showcase my talent and sharpen my skills in javascript I started a 30 day 30 application challenges (only on monday - friday). The first 20 days of the challenge I will create 20 applications and the last 10 days I will use to create videos explaing computer science algorithms and data structures. One day at a time. Consistency and time management are extremly important for accomplishing this challenge.  
 
 ## Applications
 1. To do Applicaion
@@ -21,6 +21,13 @@ In order to showcase my talent and sharpen my skills in javascript I started a 3
 15. weathery
 16. Sun rise alarm
 17. Budget App
+18. Reciepe Book
+19. Stock Chart
+20. Book Shelf
+
+## Algorithms and Data Structures
+1. LinkedLists
+2. Breadth First Search
 
 
 
