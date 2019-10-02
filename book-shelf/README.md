@@ -14,7 +14,7 @@ A Book shelf managing application
 
 
 ## Preview
-![Picture of Body Mass Calculator]()
+![Picture of Body Mass Calculator](https://github.com/mmubuso/30-Day-30-Applications-Challenge/blob/master/book-shelf/public/Book%20Shelf.png)
 
 
 ## Technologies Used
