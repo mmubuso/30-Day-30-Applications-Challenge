@@ -2,17 +2,17 @@
 
 30 Day 30 Application Challenge
 
-- Preview Of Application: https://sei-chatbot.herokuapp.com/
-- <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6579909873427894273" height="687" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+- Preview Of Application: [Body Mass Calculator](https://www.linkedin.com/posts/musiteli-mubuso_30days-softwareengineering-javascript30-activity-6579910077581455360-NFkZ)
+
 
 ## Overview
-The goal of this project was to create a full stack chat application using the MERN Stack that would allow its users 
-create update and delete data from their application
+A Body mass calculator application built with React 
 
 ## Challenges
-- The biggest challenge for this application was training the bot the to reply back to specific entities and detect the correct topic given a sentence.
+- Placing state at the necessary level for concernec applications to access it.
+- Making componentes reusable and all purpose
 
-![Picture of Meridio](https://github.com/mmubuso/SEI-Chatbot/blob/master/sei-chatbot.png)
+![Picture of Body Mass Calculator](https://github.com/mmubuso/SEI-Chatbot/blob/master/sei-chatbot.png)
 
 
 ## Wireframe
