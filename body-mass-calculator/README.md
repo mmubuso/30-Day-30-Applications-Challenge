@@ -12,27 +12,14 @@ A Body mass calculator application built with React
 - Placing state at the necessary level for concernec applications to access it.
 - Making componentes reusable and all purpose
 
-![Picture of Body Mass Calculator](https://github.com/mmubuso/SEI-Chatbot/blob/master/sei-chatbot.png)
+## Preview
+![Picture of Body Mass Calculator](https://github.com/mmubuso/30-Day-30-Applications-Challenge/blob/master/body-mass-calculator/public/body-calculator.png)
 
-
-## Wireframe
-!["A Wireframe of Meridio"](https://github.com/mmubuso/SEI-Chatbot/blob/master/wireframe.png)
-
-## ERD
-!["ERD"](https://github.com/mmubuso/SEI-Chatbot/blob/master/ERD.png)
-
-##Journey Mapping
-!["Journey Map"](https://github.com/mmubuso/SEI-Chatbot/blob/master/Journey%20Mapping.png)
 
 ## Technologies Used
-- Backend --> Express, Mongoose, NodeJs, Wit, AI
-- Frontend --> Bootstrap 4, JavaScript, React.js, Wit,AI, Create React flips
+- Frootend--> React, React Hooks
 
 ## Acknowledgements
--CSS Tricks for the fad in animation
+-CSS Tricks for the styling of slider
 
-## Future Developments/Improvements
-### Phase 1
--Adjust channels page for a friendlier mobile view
--allow users to have profile pictures
 
